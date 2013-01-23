@@ -1,9 +1,7 @@
 language: ruby
 
-bundler_args: --without coverage
 rvm:
   - 1.9.3
-  - ruby-head
 
-script:
-  - bundle exec rake db:test:prepare
+before_script: "bundle exec rake db:drop db:create db:migrate"
+script: "bundle exec rspec spec/"
