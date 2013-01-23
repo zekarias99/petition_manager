@@ -14,21 +14,20 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'pry-rails'
-  gem 'rspec-rails'
-  gem 'ZenTest'
-  gem 'autotest-growl'
-  gem 'autotest-fsevent'
-  gem 'spork'
+  gem "sqlite3", "~> 1.3.7"
+  gem "pry-rails", "~> 0.2.2"
+  gem "rspec-rails", "~> 2.12.2"
+  gem "ZenTest", "4.8.3"
+  gem "autotest-growl", "~> 0.2.16"
+  gem "autotest-fsevent", "~> 0.2.8"
+  gem "spork", "~> 0.9.2"
 end
 
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails', '4.0.0'
-  gem 'guard-rspec'
-  gem 'guard-cucumber'
-  gem 'guard-livereload'
-  gem 'rb-fsevent'
+  gem "guard-rspec", "~> 2.4.0"
+  gem "guard-livereload", "~> 1.1.3"
+  gem "rb-fsevent", "~> 0.9.3"
   gem 'database_cleaner', '~> 0.9.1'
 end
