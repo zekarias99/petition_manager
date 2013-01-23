@@ -31,4 +31,5 @@ group :test do
   gem 'guard-livereload'
   gem 'rb-fsevent'
   gem 'database_cleaner', '~> 0.9.1'
+  gem "faker", "~> 1.1.2"
 end

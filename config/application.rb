@@ -66,3 +66,9 @@ module PetitionManager
     config.assets.version = '1.0'
   end
 end
+
+#to have rails generators automatically generate factories instead of fixtures
+#see configuration: https://github.com/thoughtbot/factory_girl_rails
+config.generators do |g|
+    g.fixture_replacement :factory_girl
+end  
