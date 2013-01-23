@@ -14,7 +14,7 @@ describe Student do
 		Factory.build(:student, lastname: nil).should_not be_valid
 	end
 	it "is invalid without a username/email" do
-		pending
+		Factory.build(:student, username: nil).should_not be_valid
 	end
 	
 	it "is invalid without a student id" do
