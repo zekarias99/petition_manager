@@ -1,11 +1,19 @@
-- title
+require 'spec_helper'
 
-- description
+describe Program do
+	it "has a valid factory" do
+		Factory.create(:program).should be_valid
+	end
 
-- course_id
+	it "has a title" do
+		Factory.build(:program, title: nil).should_not be_valid
+	end
 
-- programs_associated
+	it "has an owner" do #there's a better word than owner
+		Factory.build(:program, owner: nil).should_not be_valid
+	end #faculty_id 
 
-- pre-requisites
-
-- credits
+	# it "has courses" do
+	# 	Factory.build(:program, courses: nil).should_not be_valid
+	# end
+end

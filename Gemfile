@@ -25,7 +25,7 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
-  gem 'factory_girl_rails', '4.0.0'
+  gem 'factory_girl', '~> 2.6.4'
   gem "guard-rspec", "~> 2.4.0"
   gem "guard-livereload", "~> 1.1.3"
   gem "rb-fsevent", "~> 0.9.3"

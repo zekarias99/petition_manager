@@ -1,32 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Petition Manager
+
+See maptini image for models/object hierarchy: http://maptini.com/maps/285be1d0-3d0b-0130-595d-12313819673f#
+
 Students
   - email/username (e.g. danny.pham, danny.pham@bellevuecollege.edu)
   - student_id (validations: 9 digit number)
@@ -58,23 +33,23 @@ Petition
 
 User Stories
 
-A STUDENT signs in to the application with his/her student id and birthday/PIN. The application automatically knows that the id is for a student as opposed to an employee. (If this were connected to the system, it would know college email, phone address, and other contact info.)
+A STUDENT signs in to the application with his/her student id and birthday/PIN. The application automatically knows that the id is for a STUDENT as opposed to an EMPLOYEE. (If this were connected to the system, it would know college email, phone address, and other contact info.)
 
 The STUDENT can then request a petition for one or many PROGRAMS the STUDENT is completing.
-Example: A student wants to request a substitution of one class in place of another
-Example: A student wants to request a waiver of one class. No specific class must be substituted, but the student needs to make up the missing credits.
+Example: A STUDENT wants to request a SUBSTITUTION of one COURSE in place of another
+Example: A STUDENT wants to request a WAIVER of one COURSE. No specific COURSE must be substituted, but the STUDENT needs to make up the missing credits.
 
-Petitions include a rationale for the substitution/waiver request. This may be as minimal as a few sentences explaining the reasoning. (This might also include document attachments, if we want to make it more complicated. If at any point in the process, additional documents or clarification of rationale is needed, the student can be directly notified.)
+PETITIONS include a rationale for the SUBSTITUTION/WAIVER request. This may be as minimal as a few sentences explaining the reasoning. (This might also include document attachments, if we want to make it more complicated. If at any point in the process, additional documents or clarification of rationale is needed, the STUDENT can be directly notified.)
 
-The application already knows the associated PROGRAM CHAIR for the selected programs.
+The application already knows the associated PROGRAM_CHAIR for the selected PROGRAMS.
 
 
-After submission, the form is sent to the corresponding Program Chair. The Program Chair approves or rejects this petition.
+After submission, the form is sent to the corresponding PROGRAM_CHAIR. The PROGRAM_CHAIR approves or rejects this PETITION.
 
-If rejected, the Program Chair can include an optional reason why for the student to review.
-If approved, the Program Chair submits this first round of approval to the Records/Evaluations office for the next round of approval.
-If it is rejected, the Program Chair is notified so that s/he can notify the student.
-If it is approved, It then goes to an administrator (Division Dean) for separate approval.
-The Division Dean can reject this, notifying the Evaluations office and Program Chair.
-Otherwise, s/he can approve the petition, submitting this back to the Records/Evaluations office for filing.
-The student is then notified of the approval.
+If rejected, the PROGRAM_CHAIR can include an optional reason why for the STUDENT to review.
+If approved, the PROGRAM_CHAIR submits this first round of approval to the Records/Evaluations office (designated EMPLOYEE(s)) for the next round of approval.
+If it is rejected, the PROGRAM_CHAIR is notified so that s/he can notify the STUDENT.
+If it is approved, It then goes to an EMPLOYEE (Division Dean) for separate approval.
+The Division Dean can reject this, notifying the Evaluations office and PROGRAM_CHAIR.
+Otherwise, s/he can approve the PETITION, submitting this back to the Evaluations office for filing.
+The STUDENT is then notified of the approval.
