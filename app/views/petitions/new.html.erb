@@ -1,0 +1,12 @@
+<h2>New Petition</h2>
+<%= form_for(@petition) do |f| %>
+  <p>
+    <%= f.label :exception %><br />
+    <%= f.select :exception, ['waiver','substition'] %>
+  </p>
+  <p>
+    <%= f.label :reason %><br />
+    <%= f.text_area :reason %>
+  </p>
+  <%= f.submit %>
+<% end %>
