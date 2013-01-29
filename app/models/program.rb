@@ -1,3 +1,4 @@
 class Program < ActiveRecord::Base
-  attr_accessor :title, :owner #courses
+  attr_accessible :owner, :title
+  validates :owner, :title, :presence => true
 end
