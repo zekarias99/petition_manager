@@ -1,0 +1,8 @@
+<h2>Petitions</h2>
+<ul>
+  <% @petitions.each do |petition| %>
+    <li><%= link_to petition.id, petition %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create Petition", new_petition_path %>
