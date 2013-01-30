@@ -1,11 +1,11 @@
-- title
+# - title
 
-- description
+# - description
 
-- course_id
+# - course_id
 
-- programs_associated
+# - programs_associated
 
-- pre-requisites
+# - pre-requisites
 
-- credits
+# - credits
