@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'bootstrap-sass', '2.2.1.1'
+gem 'dynamic_form', '~> 1.1.4'
 gem 'jquery-rails', '2.1.4'
 
 # Gems used only for assets and not required

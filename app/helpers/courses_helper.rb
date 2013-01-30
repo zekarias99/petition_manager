@@ -1,7 +1,7 @@
-module ApplicationHelper
-	def title(*parts)
+module CoursesHelper
+	def course_id(*parts)
 		unless parts.empty?
-			content_for :title do 
+			content_for :course_id do 
 				(parts << "Petition Manager").join(" - ")
 			end
 		end

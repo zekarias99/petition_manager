@@ -1,4 +1,7 @@
 PetitionManager::Application.routes.draw do
+  resources :programs, :courses
+  match 'programs/' => 'programs#index'
+  match 'courses/' => 'courses#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
