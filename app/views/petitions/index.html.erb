@@ -1,7 +1,7 @@
 <h2>Petitions</h2>
 <ul>
   <% @petitions.each do |petition| %>
-    <li><%= link_to petition.id, petition %></li>
+    <li><%= link_to petition.id, petition, :id => "petition_path" %></li>
   <% end %>
 </ul>
 
