@@ -11,9 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20130129024230) do
-=======
 ActiveRecord::Schema.define(:version => 20130129062228) do
 
   create_table "courses", :force => true do |t|
@@ -24,7 +21,6 @@ ActiveRecord::Schema.define(:version => 20130129062228) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
->>>>>>> 6c4026aad2b80b5cfd494d3db53dd35a0da1f503
 
   create_table "faculties", :force => true do |t|
     t.string   "username"
@@ -34,16 +30,17 @@ ActiveRecord::Schema.define(:version => 20130129062228) do
     t.string   "email"
   end
 
-<<<<<<< HEAD
   create_table "petitions", :force => true do |t|
     t.boolean  "approved"
     t.string   "exception"
     t.string   "reason"
-=======
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "programs", :force => true do |t|
     t.string   "title"
     t.string   "owner"
->>>>>>> 6c4026aad2b80b5cfd494d3db53dd35a0da1f503
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
