@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'bootstrap-sass', '2.2.1.1'
+gem 'dynamic_form', '~> 1.1.4'
 gem 'jquery-rails', '2.1.4'
 
 # Gems used only for assets and not required
@@ -25,7 +26,7 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
-  gem 'factory_girl_rails', '4.0.0'
+  gem 'factory_girl', '~> 2.6.4'
   gem "guard-rspec", "~> 2.4.0"
   gem "guard-livereload", "~> 1.1.3"
   gem "rb-fsevent", "~> 0.9.3"

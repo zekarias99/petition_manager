@@ -1,0 +1,11 @@
+<%= form_for(@program) do |f| %>
+<%= f.error_messages %>
+	<p> 
+		<%= f.label :title %><br /> 
+		<%= f.text_field :title %>
+	</p>
+	<p> 
+		<%= f.label :owner %><br /> 
+		<%= f.text_field :owner %>
+	<%= f.submit %> 
+<% end %>
