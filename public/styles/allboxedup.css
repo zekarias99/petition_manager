@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* Little Bit of the Blues */
+body { color: #333; background-color: #eee; }
+
+
+blockquote {
+	background-color: #eee;
+	border-top-color: #333;
+	border-left-color: #333;
+	border-bottom: 4px solid #333;
+	border-right-color: #333;
+}
+
+h1, h2, h3 { color: #333; }
+
+/* jquery activated stuff */ 
+
+.active {background-color:#ddd; font-weight: bold;}
+
+.title { border-bottom: 1px solid #666; padding-bottom: 0px;}
+
+
+/* end jquery stuff */ 
+
+.standout {color: #F00;}
+
+
+#skip { 
+	background-color: #C2C8D1;
+	border-bottom: 1px dotted black	;
+	font-size: .7em;
+}
+
+
+#top { 
+	border: 1px solid #666;
+	 border-bottom: 4px solid #333;
+	background: #fff;
+}
+
+#search input.clearme { color: #999; }
+#search input { color: #666;  }
+
+
+
+
+#globalnav, .localnav {
+	background: #fff;
+	border-top: 1px solid #666 ;
+	border-left: 1px solid #666 ;
+	border-bottom: 4px solid #333 ;
+	border-right: 1px solid #666 ;
+}
+
+#nav h2 { 	
+	background-color: #333; 
+	font-size: .8em;
+	border-bottom: 1px solid #666;
+	color: #eee;
+}
+
+#nav a, #nav a:visited, #nav a:active { 
+	/*border-bottom: 1px solid #6D7578;*/
+	color: #000 ;
+	font-size: .8em;
+}
+
+#nav a:hover {
+	background: #666;
+	color: #ddd;
+}
+
+#content { background-color: #fff; border: 1px solid #666; border-bottom: 4px solid #333; padding-right: 5px;}
+	
+
+#foot {
+	background: #fff;	
+	border: 1px solid #333;
+	border-bottom: 4px solid #333;
+}
+
+#foot p.update {
+	font-style: italic;
+	font-weight: bold;
+	border-bottom: 1px solid #333;
+}
+
+
+a { color: #666; text-decoration: underline; } 
+a:visited { color: #666; text-decoration: underline; } 
+a:hover { color: #eee; background-color: #666; }
+
+

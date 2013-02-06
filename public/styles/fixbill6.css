@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+#nav * {zoom: 1}
+#search {position: relative;}
+#nav a { margin-top: 0px; }
+
+#title h1, #title h2 {
+	margin-right: 18px;
+	position: relative;
+}
+
+/* IE6 jquery fuxes for CSS Selectors*/
+h2.AfterH, h3.AfterH, h4.AfterH, h5.AfterH, h6.AfterH {margin-top: 0;}
+p.AfterH{margin-top: 0px; }
+ul.afterPH, ol.afterPH  { margin-top: .2em;}
+/* End IE6 jquery fuxes for CSS Selectors*/

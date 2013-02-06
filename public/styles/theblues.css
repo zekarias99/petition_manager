@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* Little Bit of the Blues */
+
+body { background-color: #fff; }
+
+blockquote {
+	background-color: #eee;
+	border-top-color: #64748B;
+	border-left-color: #64748B;
+	border-bottom-color: #ccc;
+	border-right-color: #ccc;
+}
+
+h1, h2, h3 { color: #333; }
+
+.quote {
+	background: url(../images/top_quote.jpg) top left no-repeat;
+	padding: 20px 10px 30px 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: .9em;
+	font-style: italic;
+	line-height: 1.4em;
+	
+}
+
+.extraq {
+	background: url('../images/bottom_quote.jpg') bottom right no-repeat;
+}
+
+
+/* jquery activated stuff */ 
+
+.active {background-color:#ccc;}
+
+.title { background: #eee; border-left: 1px solid #64748B; border-top: 1px solid #64748B;}
+
+
+/* end jquery stuff */ 
+
+.standout {color: #F00;}
+
+
+#skip { 
+	background-color: #eee;
+	border-bottom: 1px dotted black	;
+	font-size: .7em;
+}
+
+
+#top { 
+	border: 1px solid #64748B;
+	background: #eee;
+}
+
+#search input.clearme { color: #999; }
+#search input { color: #666;  }
+
+
+#globalnav, .localnav {
+	background: #fff;
+	border-top: 1px solid #64748B;
+	border-left: 1px solid #64748B;
+	border-bottom: 1px solid #64748B;
+	border-right: 1px solid #64748B;
+}
+
+#nav h2 { 	
+	background-color:#eee; 
+	font-size: .8em;
+	font-weight: bold;
+}
+
+#nav a, #nav a:visited, #nav a:active { 
+	border-bottom: 1px solid #ccc;
+	color: #64748B;
+	font-size: .8em;
+}
+
+#nav a:hover {
+	background:#64748B;
+	color: #fff;
+}
+
+#foot {
+	background: #eee;	
+	border: 1px solid #64748B;
+}
+
+#foot p.update {
+	font-style: italic;
+	font-weight: bold;
+	border-bottom: 1px solid #64748B;
+}
+
+
+a { color: #42689E; } 
+a:visited { color: #42689E; } 
+a:hover { text-decoration: none; color: #64748B }
+
+

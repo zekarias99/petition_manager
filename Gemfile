@@ -32,4 +32,5 @@ group :test do
   gem "rb-fsevent", "~> 0.9.3"
   gem 'database_cleaner', '~> 0.9.1'
   gem "faker", '~> 1.1.2'
+  gem 'devise', '2.1.0.rc'
 end

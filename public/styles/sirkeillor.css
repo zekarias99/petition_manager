@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+body {
+	font: 100%  "Verdana", Arial, Helvetica, sans-serif;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers 	the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+}
+
+
+#content, #foot { font-size: 90%; }
+#content p, #content ul, #content li, #content blockquote, #content ol, #foot p, #foot address { font-size: .9em; line-height: 1.5em; }
+
+img { border: 0; }
+
+
+h1 	{ margin-top: 0; margin-bottom: .2em; font-family: Georgia, "Times New Roman", Times, serif; font-size: 1.9em; font-weight: bold;}
+h2 	{ margin-top: 1em; margin-bottom: .2em; font-family: Georgia, "Times New Roman", Times, serif; font-size: 1.6em; font-weight: bold;}
+h3 	{ margin-top: 1em; margin-bottom: .2em; font-family: Georgia, "Times New Roman", Times, serif; font-size: 1.4em; font-weight: bold;}
+h4 	{ 	margin-top: 1em; margin-bottom: .2em; font-family:Verdana, Geneva, sans-serif; font-size: 1.2em; font-weight: bold; font-style:italic}
+h5 	{ 	margin-top: 1em; margin-bottom: .2em; font-size: 1.1em; font-weight: bold;}
+h6 	{ 	margin-top: 1em; margin-bottom: .2em; font-size: .9em; font-weight: bold;}
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 {margin-top: 0;} /*IE6 Hacks added*/
+p	{ 	margin-top: 1em; margin-bottom: .2em;}
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{margin-top: 0px;}/*IE6 Hacks added*/
+ul, ol {margin-top: 1em; margin-bottom: 0;}
+p + ul, h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul, p + ol, h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol  { margin-top: 1.2em; margin-bottom: 1.2em; } /*IE6 Hacks added*/
+
+ul {
+	list-style: square;
+	margin: 10px 0px 5px 40px;
+}
+
+#content li + li { margin-top: .5em; }
+
+
+blockquote {
+	margin: 10px 5px 25px 25px;
+	background-color: #eee;
+	border-top: 1px solid #64748B;
+	border-left: 1px solid #64748B;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 0px 10px 10px 10px;
+}
+
+.hidden { top: -9999px; left: -9090px; overflow: hidden; position: absolute; }
+
+
+/*tables */
+
+th { font-weight: bold; background: #ccc; }
+
+td, th {
+	
+	padding: 5px;
+	border-bottom: 1px solid #666;
+}
+
+tr.other { background: #eee; }
+
+/*jquery related colors styles are in theme css*/
+.title {padding: 5px; margin-left: -5px; }
+
+/* the goods */ 
+
+#wrap { }
+
+
+#skip {
+	height: 12px;
+	padding: 2px 10px;
+	text-align: left;
+}
+
+#top {
+	width: 760px;
+	margin: 12px auto;
+	height: 100px;
+	padding: 0;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #toper instead of text, you may want to remove the padding. */
+	
+}
+
+#logo { 
+	float: left;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+#title {
+	width: 760px;
+	margin: 0px auto;
+	
+}
+
+
+#title h1, #title h2 {
+	float: right;
+	margin-top: 41px;
+	margin-right: -142px;
+
+}
+
+#searchbox {
+	float: right;
+	padding-right: 15px;
+	margin: 0; /* zeroing the margin of the last element in the #toper div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	line-height: 0px;
+	margin-top: 5px;
+}
+
+
+#searchbox input{ margin-top: 0px; vertical-align: top; }  /* see fixbill6.css for position */ 
+
+
+#container {
+	width: 760px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	padding: 0px;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+
+}
+
+
+/* navigation area */ 
+
+#nav {
+	float: left;
+	width: 154px;
+}
+
+#nav div {
+	margin-bottom: 28px;
+}
+
+#globalnav, .localnav {
+	margin: 0px;
+}
+
+#nav ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav h2 {
+	display: block;
+	margin: 0px;
+	padding: 8px;
+	text-align: center;
+}
+
+#nav a, #nav a:visited, #nav a:active { 
+	text-decoration: none;
+	display: block;
+	padding: 5px;
+}
+
+
+#nav li li { margin-top: 0px; }
+
+/* Main content area */
+
+#content {
+	padding: 0px 0px 20px 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	margin-left: 168px;
+	margin-top: 34px;  /* See IE Hack in fixbill7.css */
+}
+
+#spacer {
+	clear: both;
+	height: 3em;
+}
+
+#foot {
+	width: 740px;
+	height: 50px;
+	margin: 12px auto;
+	padding: 10px;
+	text-align: left;
+}
+
+#foot p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding-top: 10px; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+#foot p.update {
+	width: 350px;
+	padding: 0px;
+
+}
