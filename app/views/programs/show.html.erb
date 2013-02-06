@@ -1,5 +1,9 @@
 <% title(@program.title, "Program") %>
-<h2><%= @program.title %></h2>
+<h2>"Programs"</h2>
+<tr>
+	<td><%= @program.title %></td>
+	<td><%= @program.owner %></td>
+</tr>
 <%= link_to "Edit Program", edit_program_path(@program) %>
 <%= link_to "Delete Program", 
 		program_path(@program),
