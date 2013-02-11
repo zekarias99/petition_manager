@@ -22,6 +22,7 @@ group :development, :test do
   gem "autotest-growl", "~> 0.2.16"
   gem "autotest-fsevent", "~> 0.2.8"
   gem "spork", "~> 0.9.2"
+  gem 'devise', '2.1.0.rc'
 end
 
 group :test do
@@ -32,5 +33,4 @@ group :test do
   gem "rb-fsevent", "~> 0.9.3"
   gem 'database_cleaner', '~> 0.9.1'
   gem "faker", '~> 1.1.2'
-  gem 'devise', '2.1.0.rc'
 end
