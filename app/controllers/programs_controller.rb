@@ -1,7 +1,8 @@
 class ProgramsController < ApplicationController
+  helper_method :sort_column, :sort_direction
   before_filter :find_program, :only => [:show, :edit, :update, :destroy]
   def index
-    @programs = Program.all
+    @programs = Program.order(sort_column + ' ' + sort_direction)
   end
   def new
   	@program = Program.new
@@ -42,4 +43,10 @@ class ProgramsController < ApplicationController
                       " for could not be found."
       redirect_to programs_path
     end	
+    def sort_column
+      Program.column_names.include?(params[:sort]) ? params[:sort] : "title"
+    end
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
 end
