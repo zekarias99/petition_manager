@@ -1,8 +1,17 @@
 <%= link_to "New Course", new_course_path %>
 
 <h2>Courses</h2>
-<ul>
+<table>
+  <tr>
+  	<th><%= sortable "course_id" %></th>
+  	<th><%= sortable "credits" %></th>
+  	<th><%= sortable "title" %></th>
+  </tr>
 	<% @courses.each do |course| %>
-		<li><%= link_to course.course_id, course %></li>
-	<% end %>
-</ul>
+    <tr>
+	  <td><%= link_to course.course_id, course %></td>
+	  <td><%= link_to course.credits, course %></td>
+      <td><%= link_to course.title, course %></td>
+	</tr>
+  <% end %>
+</table>
