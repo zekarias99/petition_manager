@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Facutly do
+describe Faculty do
 
 	it "has a valid factory" do
 		pending
