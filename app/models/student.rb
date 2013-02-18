@@ -1,3 +1,3 @@
-class Student < ActiveRecord::Base
-  attr_accessible :student_id, :username, :firstname, :lastname, :programs
+class Student < User
+  attr_accessible :student_id, :programs
 end
