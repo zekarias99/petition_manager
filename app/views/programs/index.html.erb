@@ -1,16 +1,16 @@
-<%= link_to "New Program", new_program_path %>
-
 <h2>Programs</h2>
-<table>
+<table class="table table-striped">
   <tr>
   	<th><%= sortable "title" %></th>
   	<th><%= sortable "program_chair" %></th>
   </tr>
   <% @programs.each do |program| %>
     <tr>
-	  <td><%= link_to program.title, program %></td>
+	    <td><%= link_to program.title, program %></td>
       <td><%= link_to program.owner, program %></td>
       <%#program.owner.email doesn't exist yet%>
-	</tr>
+	  </tr>
   <% end %>
 </table>
+
+<%= link_to "New Program", new_program_path %>
