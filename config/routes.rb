@@ -1,4 +1,6 @@
 PetitionManager::Application.routes.draw do
+  devise_for :users
+
   resources :programs, :courses, :petitions
 
   root :to => 'petitions#index'
