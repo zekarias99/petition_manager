@@ -22,6 +22,8 @@ group :development, :test do
   gem "autotest-growl", "~> 0.2.16"
   gem "autotest-fsevent", "~> 0.2.8"
   gem "spork", "~> 0.9.2"
+  gem 'paperclip', '2.7.0'
+  gem 'factory_girl_rails', '~> 1.7.0'
 end
 
 group :test do
