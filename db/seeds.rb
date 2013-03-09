@@ -36,12 +36,40 @@ courses = [ {:course_id => 'DMA 100', :credits => 2, :description => 'TBD', :tit
 	        {:course_id => 'PROG 120', :credits => 5, :description => 'TBD', :title => 'Object-Oriented Programming'}
           ]
 
-courses.each do |course|
-  #Course.create!(course)
-  Course.find_or_create_by_course_id(course)
+ students = [
+              {:username => 'ben.woodall', :firstname => 'Ben', :lastname => 'Woodall', :email => 'test1@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'danny.pham', :firstname => 'Danny', :lastname => 'Pham', :email => 'test2@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'fred.flinstone', :firstname => 'Fred', :lastname => 'Flintstone', :email => 'test3@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'barney.rubble', :firstname => 'Barney', :lastname => 'Rubble', :email => 'test4@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'steve.smith', :firstname => 'Steve', :lastname => 'Smith', :email => 'test5@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'stan.smith', :firstname => 'Stan', :lastname => 'Smith', :email => 'test6@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'marge.simpson', :firstname => 'Marge', :lastname => 'Simpson', :email => 'test7@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'lois.griffen', :firstname => 'Lois', :lastname => 'Griffen', :email => 'test8@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+              {:username => 'meg.griffen', :firstname => 'Meg', :lastname => 'Griffen', :email => 'test9@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'}
+            ]
+
+faculty = [
+            {:username => 'steve.martin', :firstname => 'Steve', :lastname => 'Martin', :email => 'testa@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+            {:username => 'john.belushi', :firstname => 'John', :lastname => 'Belushi', :email => 'testb@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'},
+            {:username => 'rosanne.roseannadanna', :firstname => 'Rosanne', :lastname => 'Roseannadanna', :email => 'testc@example.com', :password => 'abcdef', :password_confirmation => 'abcdef'}
+          ]
+
+faculty.each do |f|
+  Faculty.create!(f)
 end
 
-programs.each do |program|
-  #Program.create!(program)
-  Program.find_or_create_by_title(program)
+students.each do |student|
+  Student.create!(student)
 end
+
+
+
+# courses.each do |course|
+  #Course.create!(course)
+#   Course.find_or_create_by_course_id(course)
+# end
+
+# programs.each do |program|
+  #Program.create!(program)
+  # Program.find_or_create_by_title(program)
+# end
