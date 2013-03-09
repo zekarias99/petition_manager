@@ -12,6 +12,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'twitter-bootstrap-rails', '2.1.3'
   gem 'uglifier', '>= 1.0.3'
+
 end
 
 group :development, :test do
@@ -22,7 +23,9 @@ group :development, :test do
   gem "autotest-growl", "~> 0.2.16"
   gem "autotest-fsevent", "~> 0.2.8"
   gem "spork", "~> 0.9.2"
+  gem 'devise', '2.1.0.rc'
   gem 'paperclip', '2.7.0'
+  gem 'devise', '2.1.0.rc'
   gem 'factory_girl_rails', '~> 1.7.0'
 end
 
