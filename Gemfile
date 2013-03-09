@@ -25,6 +25,7 @@ group :development, :test do
   gem "spork", "~> 0.9.2"
   gem 'devise', '2.1.0.rc'
   gem 'paperclip', '2.7.0'
+  gem 'devise', '2.1.0.rc'
   gem 'factory_girl_rails', '~> 1.7.0'
 end
 
