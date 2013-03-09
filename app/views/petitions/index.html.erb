@@ -1,8 +1,20 @@
-<h2>Petitions</h2>
-<ul>
+<table class="table table-striped">
+  <tr>
+    <th>Petition ID</th>
+    <th>Status</th>
+    <th>Substitution/Waiver</th>
+    <th>Reason</th>
+  </tr>
   <% @petitions.each do |petition| %>
-    <li><%= link_to petition.id, petition, :id => "petition_path" %></li>
+    <tr>
+      <td><%= link_to petition.id,       petition, 	:id 		  => "petition_path" %></td>
+      <td><%= link_to petition.approved, petition, 	:approved => "petition_path" %></td>
+      <td><%= link_to petition.exception, petition,  :exception => "petition_path" %></td>
+      <td><%= link_to petition.reason,   petition, 	:reason 	=> "petition_path" %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
 
 <%= link_to "Create Petition", new_petition_path %>
+
+
