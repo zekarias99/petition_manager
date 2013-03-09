@@ -1,5 +1,5 @@
 <h2>New Petition</h2>
-<%= form_for [@petition, @asset], html => { :multipart => true } do |f| %>
+<%= form_for [@petition, @asset], :html => { :multipart => true } do |f| %>
     <%= f.label :exception %><br />
     <%= f.select :exception, ['Waiver','Substition'] %>
   </p>

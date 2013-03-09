@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308053702) do
+ActiveRecord::Schema.define(:version => 20130309222213) do
+
+  create_table "assets", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "title"
@@ -33,9 +38,13 @@ ActiveRecord::Schema.define(:version => 20130308053702) do
   create_table "petitions", :force => true do |t|
     t.string   "exception"
     t.string   "reason"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "approved"
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
   end
 
   create_table "programs", :force => true do |t|
