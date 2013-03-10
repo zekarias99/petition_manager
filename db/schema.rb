@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(:version => 20130310062209) do
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
     t.integer  "petition_id"
+    t.integer  "student_id"
+    t.integer  "faculty_id"
   end
 
   create_table "programs", :force => true do |t|
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20130310062209) do
     t.string   "username"
     t.string   "firstname"
     t.string   "lastname"
+    t.string   "type"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

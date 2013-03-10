@@ -15,5 +15,9 @@
       </p>
     <% end %>
   </p>
+  <p>
+    <%= f.label :faculty_id %><br />
+    <%= f.collection_select :faculty_id, Faculty.all, :id, :username %>
+  </p>
   <%= f.submit %>
 <% end %>
