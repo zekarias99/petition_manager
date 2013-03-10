@@ -5,6 +5,7 @@ FactoryGirl.define do
   	f.email { Faker::Internet.email }
     #f.faculty_id { [95000000..99999999].sample }
     #f.petitions Factory.create(:petition)
-    f.password { Faker::Lorem.word }
+    f.username { Faker::Internet.user_name }
+    f.password { [000000..123199].sample }
   end
 end
