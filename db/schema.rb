@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130309215606) do
+ActiveRecord::Schema.define(:version => 20130309234111) do
+
+  create_table "assets", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "title"
@@ -22,17 +27,38 @@ ActiveRecord::Schema.define(:version => 20130309215606) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "faculties", :force => true do |t|
+    t.string   "username"
+    t.string   "facutly_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "email"
+  end
+
   create_table "petitions", :force => true do |t|
     t.string   "exception"
     t.string   "reason"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "approved"
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
+    t.integer  "student_id"
+    t.integer  "faculty_id"
   end
 
   create_table "programs", :force => true do |t|
     t.string   "title"
     t.string   "owner"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "students", :force => true do |t|
+    t.string   "username"
+    t.string   "student_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -48,12 +74,10 @@ ActiveRecord::Schema.define(:version => 20130309215606) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-    t.string   "type"
     t.string   "username"
     t.string   "firstname"
     t.string   "lastname"
+    t.string   "type"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -7,7 +7,7 @@ feature 'Creating Petitions' do
   end
 
   scenario "can create a petition" do
-    select("waiver", :from => :exception)
+    select("Waiver", :from => :exception)
     click_button 'Create Petition'
     page.should have_content('Petition has been created.')
   end
