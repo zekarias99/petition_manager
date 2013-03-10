@@ -1,12 +1,14 @@
 class PetitionsController < ApplicationController
   before_filter :find_petition, :only => [:show, :edit, :update, :destroy]
-  
+
   def index
     @petitions = Petition.all
   end
 
   def new
     @petition = Petition.new
+    @faculty = Faculty.all
+    Faculty.all.each { |f| @faculty << "#{f.firstname} #{f.lastname}" }
   end
 
   def create
@@ -23,7 +25,7 @@ class PetitionsController < ApplicationController
 
   def show
   end
-  
+
   def edit
   end
 
@@ -43,5 +45,5 @@ class PetitionsController < ApplicationController
       flash[:alert] = "The petition you were looking" +
                       " for could not be found."
       redirect_to petitions_path
-    end  
+    end
 end

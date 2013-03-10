@@ -1,7 +1,7 @@
 class Petition < ActiveRecord::Base
-  attr_accessible :approved, :exception, :reason, :asset
-  #belongs_to :student
-  #belongs_to :faculty
+  attr_accessible :approved, :exception, :reason, :asset, :faculty_id, :student_id
+  belongs_to :student
+  belongs_to :faculty
   #belongs_to :program
   #belongs_to :user
   has_attached_file :asset

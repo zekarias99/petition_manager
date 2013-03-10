@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130309231031) do
+ActiveRecord::Schema.define(:version => 20130309234111) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(:version => 20130309231031) do
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
+    t.integer  "student_id"
+    t.integer  "faculty_id"
   end
 
   create_table "programs", :force => true do |t|
@@ -75,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20130309231031) do
     t.string   "username"
     t.string   "firstname"
     t.string   "lastname"
+    t.string   "type"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
