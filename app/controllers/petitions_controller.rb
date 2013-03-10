@@ -1,4 +1,5 @@
 class PetitionsController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_petition, :only => [:show, :edit, :update, :destroy]
   before_filter :check_type, :only => :index
 

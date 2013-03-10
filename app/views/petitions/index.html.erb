@@ -17,8 +17,8 @@
         <td><%= petition.student_username %></td>
       <% end %>
       <td><%= link_to petition.approved, petition, :approved => "petition_path" %></td>
-      <td><%= link_to petition.exception, petition, :exception => "petition_path" %></td>
-      <td><%= link_to petition.reason, petition, :reason 	=> "petition_path" %></td>
+      <td><%= petition.exception %></td>
+      <td><%= petition.reason %></td>
     </tr>
   <% end %>
 </table>
