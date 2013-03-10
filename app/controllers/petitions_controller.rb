@@ -1,8 +1,8 @@
 class PetitionsController < ApplicationController
   before_filter :find_petition, :only => [:show, :edit, :update, :destroy]
+  before_filter :check_type, :only => :index
 
   def index
-    @petitions = Petition.all
   end
 
   def new
@@ -45,5 +45,13 @@ class PetitionsController < ApplicationController
       flash[:alert] = "The petition you were looking" +
                       " for could not be found."
       redirect_to petitions_path
+    end
+
+    def check_type
+      if current_user.type == "Student"
+        @petitions = Petition.where(:student_id => current_user.id).all
+      else
+        @petitions = Petition.where(:faculty_id => current_user.id).all
+      end
     end
 end
