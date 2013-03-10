@@ -7,6 +7,8 @@ class PetitionsController < ApplicationController
 
   def new
     @petition = Petition.new
+    #@petition.build
+    3.times { @petition.assets.build } #disaster?
   end
 
   def create

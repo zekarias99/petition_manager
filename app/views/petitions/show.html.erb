@@ -1,17 +1,18 @@
-<h2><%= @petition.id %></h2>
+<small>Created by (put user here)</small>
+<%= simple_format(@petition.id) %>
 <% if @petition.assets.exists? %>
-  <h3>Attached File</h3>
-  <div class='assets'>
-    <% @ticket.assets.each do |asset| %>	
+  <h3>Attached Files</h3>
+  <div class="assets">
+    <% @petition.assets.each do |asset| %>	
   	  <p>
-  	    <%= link_to File.basename(@asset.asset_file_name),
-  	        @asset.asset.url %>
+  	    <%= link_to File.basename(asset.asset_file_name.to_s),
+  	        asset.asset.url %>
   	  </p>
   	  <p>
   	    <small><%= number_to_human_size(asset.asset.size) %></small>
   	  </p>
-    </div>
-  <% end %>
+    <% end %>  
+  </div>
 <% end %>
 
 <%= link_to "Edit Petition", edit_petition_path(@petition) %>

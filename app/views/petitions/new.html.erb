@@ -1,19 +1,2 @@
 <h2>New Petition</h2>
-<%= form_for [@petition, @asset], :html => { :multipart => true } do |f| %>
-    <%= f.label :exception %><br />
-    <%= f.select :exception, ['Waiver','Substition'] %>
-  </p>
-  <p>
-    <%= f.label :reason %><br />
-    <%= f.text_area :reason %>
-  </p>
-  <p>
-    <% number = 0 %>
-    <%= f.fields_for :assets do |asset| %>
-      <p>
-        <%= asset.label :asset, "File #{number += 1}" %>
-        <%= asset.fill_field :asset %>
-      </p>
-    <% end %>
-  <%= f.submit %>
-<% end %>
+<%= render "form" %>
