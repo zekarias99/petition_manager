@@ -24,7 +24,7 @@ group :development, :test do
   gem "autotest-fsevent", "~> 0.2.8"
   gem "spork", "~> 0.9.2"
   gem 'devise', '2.1.0.rc'
-  gem 'paperclip', '2.7.0'
+  gem 'paperclip', '3.4.1'
   gem 'devise', '2.1.0.rc'
   gem 'factory_girl_rails', '~> 1.7.0'
 end

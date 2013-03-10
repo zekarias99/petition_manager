@@ -7,8 +7,7 @@ class PetitionsController < ApplicationController
 
   def new
     @petition = Petition.new
-    @faculty = Faculty.all
-    Faculty.all.each { |f| @faculty << "#{f.firstname} #{f.lastname}" }
+    3.times { @petition.assets.build }
   end
 
   def create
