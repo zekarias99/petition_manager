@@ -5,3 +5,9 @@
 <%= link_to "Petitions", petitions_path, :class => 'brand'%>
 <%#= link_to "Students", students, :class => 'brand'%>
 <%# change this to Home or Dashboard and read nav from tb docs%>
+<% if user_signed_in? %>
+  <div class='brand'>Signed in as <%= current_user.username %></div>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'brand' %>
+<% else %>
+  <%= link_to "Sign in", new_user_session_path, :class => 'brand' %>
+<% end %>

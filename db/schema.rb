@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(:version => 20130310062209) do
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
-    t.integer  "petition_id"
     t.integer  "student_id"
     t.integer  "faculty_id"
+    t.integer  "petition_id"
   end
 
   create_table "programs", :force => true do |t|

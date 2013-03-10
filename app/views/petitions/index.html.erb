@@ -1,20 +1,27 @@
 <table class="table table-striped">
   <tr>
-    <th>Petition ID</th>
+    <% if current_user.type == "Student" %>
+      <th>Faculty</th>
+    <% else %>
+      <th>Student</th>
+    <% end %>
     <th>Status</th>
     <th>Substitution/Waiver</th>
     <th>Reason</th>
   </tr>
   <% @petitions.each do |petition| %>
     <tr>
-      <td><%= link_to petition.id,       petition, 	:id 		  => "petition_path" %></td>
-      <td><%= link_to petition.approved, petition, 	:approved => "petition_path" %></td>
-      <td><%= link_to petition.exception, petition,  :exception => "petition_path" %></td>
-      <td><%= link_to petition.reason,   petition, 	:reason 	=> "petition_path" %></td>
+      <% if current_user.type == "Student" %>
+        <td><%= petition.faculty_username %></td>
+      <% else %>
+        <td><%= petition.student_username %></td>
+      <% end %>
+      <td><%= link_to petition.approved, petition, :approved => "petition_path" %></td>
+      <td><%= petition.exception %></td>
+      <td><%= petition.reason %></td>
     </tr>
   <% end %>
 </table>
-
-<%= link_to "Create Petition", new_petition_path %>
-
-
+<% if current_user.type == "Student" %>
+  <%= link_to "Create Petition", new_petition_path %>
+<% end %>
