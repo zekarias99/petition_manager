@@ -12,6 +12,7 @@ class PetitionsController < ApplicationController
 
   def create
     @petition = Petition.new(params[:petition])
+    @petition.student_id = current_user.id
     @petition.approved = 'Pending'
     if @petition.save
       flash[:notice] = "Petition has been created."
