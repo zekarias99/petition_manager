@@ -20,7 +20,7 @@ feature 'Creating Petitions' do
   	attach_file "File #3", "spec/fixtures/transcript2.txt" 
   	click_button "Create Petition" 
   	page.should have_content("Petition has been created.") 
-  	within("#petition .assets") do
+  	within(".assets") do
       page.should have_content("resume.txt") 
       page.should have_content("transcript1.txt") 
       page.should have_content("transcript2.txt")
