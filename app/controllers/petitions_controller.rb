@@ -31,6 +31,13 @@ class PetitionsController < ApplicationController
   end
 
   def update
+    if @petition.update_attributes(params[:petition])
+      flash[:notice] = "Petition has been updated."
+      redirect_to [@petition]
+    else
+      flash[:alert] = "Petition has not been updated."
+      render :action => "edit"
+    end
   end
 #this method is only for testing
   def destroy
