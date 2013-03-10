@@ -19,5 +19,12 @@
     <%= f.label :faculty_id %><br />
     <%= f.collection_select :faculty_id, Faculty.all, :id, :username %>
   </p>
+  <% if current_user.type == "Faculty" %>
+    <p>
+      <%= f.label :approved, "Status" %>
+      <%= f.select :approved, ['Pending', 'Approved', 'Denied'] %>
+    </p>
+  <% end %>
+
   <%= f.submit %>
 <% end %>
